@@ -21,7 +21,6 @@ public class Main extends AppCompatActivity {
     EditText editText3;
     int counter = 0;
     float result = 0;
-    int number;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +49,7 @@ public class Main extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 if (counter > 12){
                     result = Float.parseFloat(editText1.getText().toString()) * 2;
-                    textView1.setText("" + result);
+                    textView1.setText(String.valueOf(result));
                 }
                 if (counter == 23){
                     textView2.setText("I love GoIT so much");
@@ -71,13 +70,11 @@ public class Main extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (editText3.getText().equals("")){
-                    textView6.setText("");
-                }
-                else{
+                int number = 0;
+                if(editText3.length() > 0){
                     number = Integer.parseInt(editText3.getText().toString());
-                    textView6.setText("" + fib(number));
                 }
+                textView6.setText("" + fib(number));
             }
         });
     }
@@ -86,11 +83,6 @@ public class Main extends AppCompatActivity {
         result = Float.parseFloat(editText1.getText().toString()) * 3;
         textView1.setText("" + result);
     }
-
-//    private void checkArg(int number){
-//        if (number
-//        }
-//    }
 
     private static long fib(int number){
         if (number <= 1) return number;
