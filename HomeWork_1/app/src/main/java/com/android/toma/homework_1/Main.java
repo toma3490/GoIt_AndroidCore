@@ -15,12 +15,11 @@ import java.math.BigInteger;
 public class Main extends AppCompatActivity {
 
     private TextView textView1;
-    TextView textView3;
-    EditText editText1;
-    EditText editText2;
+    private TextView textView3;
+    private EditText editText1;
+    private EditText editText2;
 
     private int counter = 0;
-//    float result = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +80,7 @@ public class Main extends AppCompatActivity {
         counter++;
         if (counter >= 23){
             textView1.setText("I love GoIT so much");
-            Toast.makeText(getApplicationContext(), "Press Reset", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Press Reset", Toast.LENGTH_SHORT).show();
             return;
         }
         textView1.setText("" + counter);
