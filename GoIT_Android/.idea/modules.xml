@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GoIT_Android.iml" filepath="$PROJECT_DIR$/GoIT_Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homeWork_1.1/homeWork_1.1.iml" filepath="$PROJECT_DIR$/homeWork_1.1/homeWork_1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework_1.2/homework_1.2.iml" filepath="$PROJECT_DIR$/homework_1.2/homework_1.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homework_2.1/homework_2.1.iml" filepath="$PROJECT_DIR$/homework_2.1/homework_2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_4/module_4.iml" filepath="$PROJECT_DIR$/module_4/module_4.iml" />
+    </modules>
+  </component>
+</project>
