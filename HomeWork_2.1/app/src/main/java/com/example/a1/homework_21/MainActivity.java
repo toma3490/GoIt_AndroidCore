@@ -2,120 +2,69 @@ package com.example.a1.homework_21;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.EditText;
-import android.widget.SeekBar;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+import com.example.a1.homework_21.enums.Month;
 
-    EditText editBill;
-    SeekBar seekBar;
-    TextView percent;
-    TextView percentValue;
-    TextView totalSum;
-    float tips = 0;
-    float money;
+public class MainActivity extends AppCompatActivity {
+    private Spinner day;
+    private Spinner month;
+    private Spinner year;
+    private Month selectedMonth;
+    Month[] months = Month.values();
 
-    final String LOG_TAG = "Log";
-    final String KEY_TIPS = "TIPS";
-    final String KEY_MONEY = "MONEY";
+    String[] data = {"one", "two", "three", "four", "five"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d(LOG_TAG, "onCreate");
+        setContentView(R.layout.main);
+
+        day = (Spinner) findViewById(R.id.spinnerDay);
+        month = (Spinner) findViewById(R.id.spinnerMonth);
+        year = (Spinner) findViewById(R.id.spinnerYear);
+
+        ArrayAdapter<String> adapterDay = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, data);
+        adapterDay.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<Month> adapterMonth = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Month.values());
+        adapterDay.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        day.setAdapter(adapterDay);
+        month.setAdapter(adapterMonth);
+
+//        day.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view,
+//                                       int position, long id) {
+//                // показываем позиция нажатого элемента
+//                Toast.makeText(getBaseContext(), "Position = " + position, Toast.LENGTH_SHORT).show();
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0) {
+//            }
+//        });
 
 
-        editBill = (EditText) findViewById(R.id.editBill);
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
-        percent = (TextView) findViewById(R.id.percent);
-        percentValue = (TextView) findViewById(R.id.percentValue);
-        totalSum = (TextView) findViewById(R.id.totalSum);
+//        month.setOnItemClickListener(new AdapterView.OnItemSelectedListener(){
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                for (Month month : months) {
+//                    if (month.ordinal() == position) {
+//                        selectedMonth = month;
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//            }
+//        });
 
-        seekBar.setOnSeekBarChangeListener(this);
-//        money = getBill(editBill);
-
-    }
-
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(LOG_TAG, "onDestroy");
-    }
-
-    protected void onPause() {
-        super.onPause();
-        Log.d(LOG_TAG, "onPause");
-    }
-
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(LOG_TAG, "onRestart");
-    }
-
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        tips = savedInstanceState.getFloat("KEY_TIPS");
-        money = savedInstanceState.getFloat("KEY_MONEY");
-        Log.d(LOG_TAG, "onRestoreInstanceState");
-    }
-
-    protected void onResume() {
-        super.onResume();
-        Log.d(LOG_TAG, "onResume ");
-    }
-
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putFloat(KEY_TIPS, tips);
-        outState.putFloat(KEY_MONEY, money);
-        Log.d(LOG_TAG, "onSaveInstanceState");
-    }
-
-    protected void onStart() {
-        super.onStart();
-        Log.d(LOG_TAG, "onStart");
-    }
-
-    protected void onStop() {
-        super.onStop();
-        Log.d(LOG_TAG, "onStop");
-    }
-
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-
-        percent.setText(String.valueOf(progress) + "%");
-
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-        int tipsPercent = Integer.parseInt(String.valueOf(seekBar.getProgress()));
-        money = getBill(editBill);
-        tips = money * tipsPercent / 100;
-        percentValue.setText(String.format("%.2f", tips));
-        totalSum.setText(String.format("%.2f", tips + money));
-    }
-
-    private float getBill (EditText editBill){
-        float bill;
-        if (editBill.length() == 0){
-            return 0;
-        }else {
-            bill = Float.parseFloat(String.valueOf(editBill.getText()));
-            if (bill < 0){
-                Toast.makeText(getApplicationContext(), "Your bill is incorrect!", Toast.LENGTH_SHORT).show();
-                return 0;
-            }
-        }
-        return bill;
+        int quantityDaysInMonts = selectedMonth.getQuantityDays();
     }
 }
