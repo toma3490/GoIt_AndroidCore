@@ -1,7 +1,5 @@
 package com.example.a1.homework_213;
 
-import android.util.Log;
-
 public class Square {
     private int side;
     private long area;

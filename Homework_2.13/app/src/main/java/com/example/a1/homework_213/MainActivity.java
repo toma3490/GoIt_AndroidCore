@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                     area.setText(String.valueOf(square.getArea()));
                     perimeter.setText(String.valueOf(square.getPerimeter()));
                     info.setText(square.toString());
+                }else {
+                    area.setText("");
+                    perimeter.setText("");
+                    info.setText("");
                 }
             }
         });
