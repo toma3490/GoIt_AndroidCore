@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Homework_2.13</string>
-    <string name="head1">Enter the value of side</string>
-    <string name="head2">The area of square</string>
-    <string name="warning">Incorrect value!</string>
-    <string name="perimeter">Perimeter of square</string>
-</resources>

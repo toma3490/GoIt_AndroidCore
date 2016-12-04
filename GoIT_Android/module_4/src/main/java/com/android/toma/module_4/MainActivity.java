@@ -8,6 +8,10 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.Toast;
 
+import com.android.toma.module_4.ticTacToe.Game;
+import com.android.toma.module_4.ticTacToe.Player;
+import com.android.toma.module_4.ticTacToe.Square;
+
 public class MainActivity extends AppCompatActivity {
 
     private Game game;

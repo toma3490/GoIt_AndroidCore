@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Homework_2.1</string>
-    <string name="setupDate">Setup date</string>
-    <string name="day">Day</string>
-    <string name="month">Month</string>
-    <string name="year">Year</string>
-    <string name="yourDate">Your date</string>
-</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">homeWork_2.1</string>
+    <string name="name">Расчет параболы</string>
+    <string name="a">Введите a</string>
+    <string name="b">Введите b</string>
+    <string name="c">Введите c</string>
+    <string name="choice">Введите </string>
+</resources>
