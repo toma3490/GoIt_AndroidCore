@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 if(editText2.length() > 0){
                     number = Integer.parseInt(editText2.getText().toString());
                 }
-                textView3.setText("" + fib(number));
+                textView3.setText(String.valueOf(fib(number)));
             }
         });
     }
@@ -77,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
     private void increaseCounter() {
         counter++;
         if (counter >= 23){
-            textView1.setText("I love GoIT so much");
+            textView1.setText(R.string.text);
             Toast.makeText(getApplicationContext(), "Press Reset", Toast.LENGTH_SHORT).show();
             return;
         }
-        textView1.setText("" + counter);
+        textView1.setText(String.valueOf(counter));
     }
 
     private long fib(int number){
