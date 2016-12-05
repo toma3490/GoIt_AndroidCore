@@ -22,21 +22,14 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:textSize="@dimen/size1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/finalData" />
-
-    <TextView
         android:text="@string/a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/size1"
         android:id="@+id/a"
         android:layout_below="@+id/head1"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:text="@string/b"
@@ -60,9 +53,9 @@
 
     <EditText
         android:layout_width="@dimen/size2"
-        android:layout_height="@dimen/size1"
+        android:layout_height="wrap_content"
         android:id="@+id/editA"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:layout_alignBottom="@+id/a"
         android:layout_alignParentEnd="true" />
 
@@ -78,19 +71,10 @@
 
     <EditText
         android:layout_width="@dimen/size2"
-        android:layout_height="@dimen/size1"
+        android:layout_height="wrap_content"
         android:ems="5"
-        android:inputType="numberDecimal"
-        android:id="@+id/editB"
-        android:layout_alignTop="@+id/b"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="@dimen/size2"
-        android:layout_height="@dimen/size1"
-        android:ems="5"
-        android:inputType="numberDecimal"
-        android:id="@+id/editYear"
+        android:inputType="numberDecimal|numberSigned"
+        android:id="@+id/editC"
         android:layout_alignTop="@+id/c"
         android:layout_alignParentEnd="true" />
 
@@ -98,6 +82,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/head2"
+        android:layout_alignStart="@+id/editC"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:text="@string/x"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size1"
+            android:id="@+id/x"
+            android:layout_weight="1"
+            android:checked="true"/>
+
+        <RadioButton
+            android:text="@string/y"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size1"
+            android:id="@+id/y"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="@dimen/size1"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/editX"
+        android:layout_alignTop="@id/head2"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/count" />
+
+    <Button
+        android:text="@string/countY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/count"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="@dimen/size1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalData"
+        android:layout_below="@+id/count"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="29dp" />
+
+    <EditText
+        android:layout_width="@dimen/size2"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="numberDecimal|numberSigned"
+        android:id="@+id/editB"
+        android:layout_alignTop="@+id/b"
         android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

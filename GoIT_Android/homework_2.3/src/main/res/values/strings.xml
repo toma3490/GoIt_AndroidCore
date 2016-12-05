@@ -5,4 +5,9 @@
     <string name="b">Введите b</string>
     <string name="c">Введите c</string>
     <string name="choice">Введите </string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="countY">Рассчитать Y</string>
+    <string name="countX">Рассчитать X</string>
+    <string name="warning">Число не может равняться 0!</string>
 </resources>
