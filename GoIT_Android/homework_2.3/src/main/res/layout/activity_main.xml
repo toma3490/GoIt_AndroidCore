@@ -123,7 +123,7 @@
 
     <TextView
         android:textSize="@dimen/size1"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/finalData"
         android:layout_below="@+id/count"
@@ -138,5 +138,13 @@
         android:id="@+id/editB"
         android:layout_alignTop="@+id/b"
         android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="29dp"
+        android:layout_below="@id/count"
+        android:id="@+id/finalData2"/>
 
 </RelativeLayout>
