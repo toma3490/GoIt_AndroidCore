@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.homework_214s.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/how_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/head1"
+            android:textSize="@dimen/textSize"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll2"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:text="@string/string_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/head2"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/string1"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <Button
+            android:text="@string/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll3"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:text="@string/string_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/head3"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/string2"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <Button
+            android:text="@string/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll4"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:text="@string/string_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/head4"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/string3"
+            android:layout_weight="1"
+            android:textSize="@dimen/textSize"/>
+
+        <Button
+            android:text="@string/generate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
