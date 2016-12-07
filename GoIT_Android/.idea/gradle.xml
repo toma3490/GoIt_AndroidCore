@@ -9,9 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/homeWork_1.1" />
+            <option value="$PROJECT_DIR$/homework_1.1" />
             <option value="$PROJECT_DIR$/homework_1.2" />
             <option value="$PROJECT_DIR$/homework_2.13" />
+            <option value="$PROJECT_DIR$/homework_2.14s" />
+            <option value="$PROJECT_DIR$/homework_2.19" />
             <option value="$PROJECT_DIR$/homework_2.3" />
             <option value="$PROJECT_DIR$/module_4" />
             <option value="$PROJECT_DIR$/offline_1" />
