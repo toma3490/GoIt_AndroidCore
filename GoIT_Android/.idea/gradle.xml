@@ -16,6 +16,9 @@
             <option value="$PROJECT_DIR$/module_4" />
             <option value="$PROJECT_DIR$/offline_1" />
             <option value="$PROJECT_DIR$/offline_1.1" />
+            <option value="$PROJECT_DIR$/offline_2.1" />
+            <option value="$PROJECT_DIR$/offline_2.2" />
+            <option value="$PROJECT_DIR$/offline_2.3" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
