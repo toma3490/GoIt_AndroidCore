@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText editA;
@@ -25,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private Button count;
     private RadioGroup radioGroup;
     private TextView result;
+    private TextView result1;
 
     private double resY;
+    private List resX;
 
     Parabola parabola = new Parabola();
 
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         count = (Button) findViewById(R.id.count);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         result = (TextView) findViewById(R.id.finalData);
+        result1 = (TextView) findViewById(R.id.finalData2);
 
         editA.addTextChangedListener(new TextWatcher() {
             @Override
@@ -66,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                     parabola.setA(valueA);
                 }else {
                     result.setText("");
+                    result1.setText("");
+                    parabola.setA(0);
                 }
             }
         });
@@ -88,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     parabola.setB(valueB);
                 }else {
                     result.setText("");
+                    result1.setText("");
+                    parabola.setB(0);
                 }
             }
         });
@@ -110,6 +119,8 @@ public class MainActivity extends AppCompatActivity {
                     parabola.setC(valueC);
                 }else {
                     result.setText("");
+                    result1.setText("");
+                    parabola.setC(0);
                 }
             }
         });
@@ -136,6 +147,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }else {
                     result.setText("");
+                    result1.setText("");
+                    parabola.setX(0);
+                    parabola.setY(0);
                 }
             }
         });
@@ -146,10 +160,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (checkedID){
                     case R.id.x:
                         count.setText(R.string.countY);
-                        resY = parabola.countY();
                         break;
                     case R.id.y:
                         count.setText(R.string.countX);
+                        break;
                 }
             }
         });
@@ -158,9 +172,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (radioGroup.getCheckedRadioButtonId() == R.id.x){
+                    resY = parabola.countY();
                     result.setText(String.valueOf(resY));
+                    result1.setText("");
                 }else{
-//                    parabola.setY(value);
+                    try{
+                        resX = parabola.countXRoots();
+                        result.setText(String.valueOf(resX.get(0)));
+                        result1.setText(String.valueOf(resX.get(1)));
+
+                    }catch (IllegalArgumentException e){
+                        result.setText(e.getMessage());
+                    }
                 }
 
             }

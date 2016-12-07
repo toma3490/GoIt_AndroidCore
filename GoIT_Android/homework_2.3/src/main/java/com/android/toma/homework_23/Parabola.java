@@ -52,14 +52,6 @@ public class Parabola {
         this.y = y;
     }
 
-    public double getDiskriminant() {
-        return diskriminant;
-    }
-
-    public void setDiskriminant(double diskriminant) {
-        this.diskriminant = diskriminant;
-    }
-
     public double countD(){
         diskriminant = b * b - 4 * a * (c - y);
         return diskriminant;
@@ -67,26 +59,27 @@ public class Parabola {
 
     public List<Double> countXRoots(){
         ArrayList<Double> roots = new ArrayList<>();
+        double disk = countD();
         if (b == 0 && c == 0){
             roots.add(Math.sqrt(y / a));
-            roots.add(-Math.sqrt(y / a));
+            roots.add(Math.sqrt(y / a) * -1);
         }
         if (b == 0 && c != 0){
-            roots.add(Math.sqrt((c - y) / a));
-            roots.add(-Math.sqrt((c - y) / a));
+            roots.add(Math.sqrt((y - c) / a));
+            roots.add(Math.sqrt((y - c) / a) * -1);
         }
         if (b != 0 && c == 0){
             roots.add(0.0);
             roots.add((y - b) / a);
         }else{
-            if (countD() > 0){
-                roots.add((-b + Math.sqrt(countD()) / 2 * a));
-                roots.add((-b + Math.sqrt(countD()) / 2 * a));
+            if (disk > 0){
+                roots.add((-b + Math.sqrt(disk)) / 2 * a);
+                roots.add((-b - Math.sqrt(disk)) / 2 * a);
             }
-            if (countD() == 0){
+            if (disk == 0){
                 roots.add(-b / 2 * a);
             }
-            if (countD() < 0){
+            if (disk < 0){
                 throw new IllegalArgumentException("Парабола не пересекает ось Х!");
             }
         }
