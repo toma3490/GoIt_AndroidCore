@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText editB;
     private EditText editC;
     private EditText editX;
-    private RadioButton radioX;
-    private RadioButton radioY;
     private Button count;
     private RadioGroup radioGroup;
     private TextView result;
@@ -43,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
         editB = (EditText) findViewById(R.id.editB);
         editC = (EditText) findViewById(R.id.editC);
         editX = (EditText) findViewById(R.id.editX);
-        radioX = (RadioButton) findViewById(R.id.x);
-        radioY = (RadioButton) findViewById(R.id.y);
         count = (Button) findViewById(R.id.count);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         result = (TextView) findViewById(R.id.finalData);
@@ -66,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
+                double valueA;
                 if (editA.length() > 0) {
-                    double valueA = Double.parseDouble(editA.getText().toString());
+                    valueA = Double.valueOf(editA.getText().toString().replace("-", "-0"));
                     parabola.setA(valueA);
                 }else {
                     result.setText("");
@@ -91,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 if (editB.length() > 0) {
-                    double valueB = Double.parseDouble(editB.getText().toString());
+                    double valueB = Double.parseDouble(editB.getText().toString().replace("-", "-0"));
                     parabola.setB(valueB);
                 }else {
                     result.setText("");
@@ -115,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 if (editC.length() > 0) {
-                    double valueC = Double.parseDouble(editC.getText().toString());
+                    double valueC = Double.parseDouble(editC.getText().toString().replace("-", "-0"));
                     parabola.setC(valueC);
                 }else {
                     result.setText("");
@@ -185,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
                         result.setText(e.getMessage());
                     }
                 }
-
             }
         });
     }
