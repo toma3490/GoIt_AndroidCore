@@ -53,5 +53,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     public void onStopTrackingTouch(SeekBar seekBar) {
 
+
     }
 }
