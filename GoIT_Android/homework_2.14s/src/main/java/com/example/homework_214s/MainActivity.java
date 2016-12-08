@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
     public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
 
         stringLength.setText(String.valueOf(progress + 1) + " symbols");
-//        int tipsPercent = Integer.parseInt(String.valueOf(seekBar.getProgress()));
-//        countMoney(tipsPercent);
     }
 
     @Override
@@ -53,6 +51,46 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
     public void onStopTrackingTouch(SeekBar seekBar) {
 
-
     }
+
+//    textView = (TextView) findViewById(R.id.textView);
+//    button1 = (Button) findViewById(R.id.button1);
+//    button2 = (Button) findViewById(R.id.button2);
+//    button3 = (Button) findViewById(R.id.button3);
+//
+//    View.OnClickListener onClickListener = new View.OnClickListener(){
+//        @Override
+//        public void onClick(View view){
+//            switch (view.getId()){
+//                case R.id.button1:
+//                    textView.setText(R.string.text1);
+//                    button1.setText(R.string.button1);
+//                    break;
+//                case R.id.button2:
+//                    textView.setText(R.string.text2);
+//                    button2.setText(R.string.button2);
+//                    break;
+//                case R.id.button3:
+//                    textView.setText(R.string.text3);
+//                    button3.setText(R.string.button3);
+//                    break;
+//            }
+//        }
+//    };
+//
+//    button1.setOnClickListener(onClickListener);
+//    button2.setOnClickListener(onClickListener);
+//    button3.setOnClickListener(onClickListener);
+//
+//    textView.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            textView.setText(R.string.text4);
+//            button1.setText(R.string.textButton);
+//            button2.setText(R.string.textButton);
+//            button3.setText(R.string.textButton);
+//
+//        }
+//    });
 }
+
