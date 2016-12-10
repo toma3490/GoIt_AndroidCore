@@ -8,17 +8,12 @@ import java.util.Random;
 
 public class StringUtils {
 
-    private String string1;
-    private String string2;
-    private String string3;
-
     private static List<Character> listChar = new ArrayList<>();
 
     public static void clearList(){
         listChar.clear();
     }
 
-    // 2-14
     public static List<Character> toCharList(String string){
         for(char c : string.toCharArray()) {
             listChar.add(c);
@@ -34,17 +29,6 @@ public class StringUtils {
             }
         }
         return counter;
-    }
-
-    //2-20 сначала в лист добавить свои строки, потом этот лист на вход методу
-    public List<String> deleteEquals(List<String> strings){
-        HashSet<String> hashSet = new HashSet<>(strings);
-        return new ArrayList<>(hashSet);
-    }
-
-    //2-24
-    public String transformToUpper(String s){
-        return s.toUpperCase();
     }
 
     public String generateRandomString(int size) {
