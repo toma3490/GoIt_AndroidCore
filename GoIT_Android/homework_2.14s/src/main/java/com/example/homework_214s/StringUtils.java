@@ -14,6 +14,10 @@ public class StringUtils {
 
     private static List<Character> listChar = new ArrayList<>();
 
+    public static void clearList(){
+        listChar.clear();
+    }
+
     // 2-14
     public static List<Character> toCharList(String string){
         for(char c : string.toCharArray()) {
@@ -43,7 +47,7 @@ public class StringUtils {
         return s.toUpperCase();
     }
 
-    public String generateRandomPassword(int size) {
+    public String generateRandomString(int size) {
         char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         StringBuilder sb = new StringBuilder();
         Random random = new Random();

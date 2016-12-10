@@ -54,6 +54,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/string1"
             android:layout_weight="1"
+            android:textAlignment="center"
             android:textSize="@dimen/textSize"/>
 
         <Button
@@ -84,6 +85,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/string2"
             android:layout_weight="1"
+            android:textAlignment="center"
             android:textSize="@dimen/textSize"/>
 
         <Button
@@ -114,6 +116,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/string3"
             android:layout_weight="1"
+            android:textAlignment="center"
             android:textSize="@dimen/textSize"/>
 
         <Button
@@ -142,9 +145,17 @@
         android:inputType="text"
         android:digits="@string/alphabet"
         android:hint="a - z"
+        android:maxLength="1"
         android:textAlignment="center"
         android:ems="10"
         android:id="@+id/editText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textSize"
+        android:id="@+id/textResult"
+        android:textAlignment="center"/>
 
 
 </LinearLayout>
