@@ -1,1 +1,1 @@
-include ':homework_1.1', ':homework_1.2', ':homework_2.3', ':module_4', ':offline_1', ':offline_1.1', ':homework_2.13', ':homework_2.19', ':homework_2.14s', ':offline_2.1', ':offline_2.2', ':offline_2.3', ':homework_2.20s'
+include ':homework_1.1', ':homework_1.2', ':homework_2.3', ':module_4', ':offline_1', ':offline_1.1', ':homework_2.13', ':homework_2.19', ':homework_2.14s', ':offline_2.1', ':offline_2.2', ':offline_2.3', ':homework_2.20s', ':homework_2.24s'
