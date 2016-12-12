@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">homework_2.14s</string>
-    <string name="how_long">How long would be your string</string>
+    <string name="app_name">homework_2.20s</string>
     <string name="string_1">String 1</string>
     <string name="string_2">String 2</string>
     <string name="string_3">String 3</string>
-    <string name="generate">Generate</string>
+    <string name="string_4">String 4</string>
+    <string name="delete_duplicates">Delete duplicates</string>
     <string name="alphabet">abcdefghijklmnopqrstuvwxyz</string>
-
+    <string name="warning">One of your field is empty!</string>
 </resources>
