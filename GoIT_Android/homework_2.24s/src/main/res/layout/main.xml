@@ -27,7 +27,8 @@
             android:textAlignment="viewStart"
             android:textSize="@dimen/textSize"
             android:digits="@string/alphabet"
-            android:maxLength="10"/>
+            android:maxLength="10"
+            android:textColor="@color/colorSecondaryText"/>
 
         <Button
             android:text="@string/to_upper_case"
@@ -41,7 +42,8 @@
             android:id="@+id/string1"
             android:textSize="@dimen/textSize"
             android:layout_weight="2"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"/>
     </LinearLayout>
 
     <LinearLayout
@@ -59,7 +61,8 @@
             android:maxLength="10"
             android:textAlignment="viewStart"
             android:textSize="@dimen/textSize"
-            android:digits="@string/alphabet"/>
+            android:digits="@string/alphabet"
+            android:textColor="@color/colorSecondaryText"/>
 
         <Button
             android:text="@string/to_upper_case"
@@ -73,7 +76,8 @@
             android:id="@+id/string2"
             android:textSize="@dimen/textSize"
             android:layout_weight="2"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"/>
     </LinearLayout>
 
     <LinearLayout
@@ -91,7 +95,8 @@
             android:maxLength="10"
             android:textAlignment="viewStart"
             android:textSize="@dimen/textSize"
-            android:digits="@string/alphabet"/>
+            android:digits="@string/alphabet"
+            android:textColor="@color/colorSecondaryText"/>
 
         <Button
             android:text="@string/to_upper_case"
@@ -105,7 +110,8 @@
             android:id="@+id/string3"
             android:textSize="@dimen/textSize"
             android:layout_weight="2"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"/>
 
     </LinearLayout>
 
@@ -124,7 +130,8 @@
             android:maxLength="10"
             android:textAlignment="viewStart"
             android:textSize="@dimen/textSize"
-            android:digits="@string/alphabet"/>
+            android:digits="@string/alphabet"
+            android:textColor="@color/colorSecondaryText"/>
 
         <Button
             android:text="@string/to_upper_case"
@@ -138,7 +145,8 @@
             android:id="@+id/string4"
             android:textSize="@dimen/textSize"
             android:layout_weight="2"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -17,7 +17,7 @@
         android:text="@string/head1"
         android:textAlignment="center"
         android:textSize="@dimen/textSize"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorPrimaryText"
         android:id="@+id/head1" />
 
     <EditText
@@ -30,7 +30,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:id="@+id/editSide"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/colorSecondaryText"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -39,27 +40,9 @@
         android:layout_marginTop="66dp"
         android:textAlignment="center"
         android:textSize="@dimen/textSize"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorPrimaryText"
         android:id="@+id/head2"
         android:layout_below="@+id/editSide"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="86dp"
-        android:textAlignment="center"
-        android:id="@+id/toString" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="@dimen/textSize"
-        android:id="@+id/area"
-        android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -69,7 +52,7 @@
         android:layout_marginTop="19dp"
         android:textAlignment="center"
         android:textSize="@dimen/textSize"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorPrimaryText"
         android:id="@+id/head3"
         android:layout_below="@+id/area"
         android:layout_alignParentStart="true" />
@@ -82,5 +65,26 @@
         android:id="@+id/perimeter"
         android:layout_below="@+id/head3"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:textColor="@color/colorSecondaryText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize"
+        android:id="@+id/area"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_below="@+id/head2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/toString"
+        android:textColor="@color/colorSecondaryText"
+        android:layout_below="@+id/perimeter"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
 </RelativeLayout>

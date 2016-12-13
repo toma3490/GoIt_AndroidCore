@@ -3,6 +3,7 @@ package com.example.homework_3;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,32 +15,52 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    HashSet<Item> hashSet = new HashSet<>();
-
     private EditText editText;
-    private Button add;
-    private ArrayAdapter adapter;
+
+    private ArrayList<String> listKey;
+    private ArrayList<Integer> listValue;
+
+    private ListView listView;
+    private MyAdapter myAdapter;
+//    private WebView webView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        listKey = new ArrayList<>();
+        listValue = new ArrayList<>();
 
-        editText = (EditText) findViewById(R.id.editText);
-        add = (Button) findViewById(R.id.add);
-        final ListView listView = (ListView) findViewById(R.id.listView1);
-        add.setOnClickListener(new View.OnClickListener() {
+        listView = (ListView) findViewById(R.id.list_view);
+        myAdapter = new MyAdapter(MainActivity.this, listKey, listValue);
+        listView.setAdapter(myAdapter);
+
+        editText = (EditText) findViewById(R.id.edit_text);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Item item = new Item(editText.getText().toString());
-                hashSet.add(item);
-                adapter.notifyDataSetChanged();
+                String input = editText.getText().toString();
+                if (input.equals("")) {
+                    return;
+                }
+                if (listKey.contains(input)) {
+                    int index = listKey.indexOf(input);
+                    int counter = listValue.get(index);
+                    listValue.set(index, ++counter);
+                } else {
+                    listKey.add(input);
+                    listValue.add(1);
+                }
                 editText.setText("");
+                myAdapter.notifyDataSetChanged();
             }
         });
-        ArrayList<Item> list = new ArrayList<>(hashSet);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
-        listView.setAdapter(adapter);
+
+//        webView = (WebView) findViewById(R.id.web_view);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webView.loadUrl("https://google.com");
 
     }
 }

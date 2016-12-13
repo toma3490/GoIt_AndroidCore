@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textSize="@dimen/size1"
-        android:textColor="@color/textColor"
+        android:textColor="@color/colorPrimaryText"
         android:id="@+id/head1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -29,7 +29,8 @@
         android:id="@+id/a"
         android:layout_below="@+id/head1"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorSecondaryText"/>
 
     <TextView
         android:text="@string/b"
@@ -39,7 +40,8 @@
         android:id="@+id/b"
         android:layout_below="@+id/a"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorSecondaryText"/>
 
     <TextView
         android:text="@string/c"
@@ -49,7 +51,8 @@
         android:id="@+id/c"
         android:layout_below="@+id/b"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorSecondaryText"/>
 
     <EditText
         android:layout_width="@dimen/size2"
@@ -57,7 +60,8 @@
         android:id="@+id/editA"
         android:inputType="numberDecimal|numberSigned"
         android:layout_alignBottom="@+id/a"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorSecondaryText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,7 +71,8 @@
         android:id="@+id/head2"
         android:layout_below="@+id/c"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorSecondaryText"/>
 
     <EditText
         android:layout_width="@dimen/size2"
@@ -76,7 +81,8 @@
         android:inputType="numberDecimal|numberSigned"
         android:id="@+id/editC"
         android:layout_alignTop="@+id/c"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorSecondaryText"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -110,7 +116,8 @@
         android:id="@+id/editX"
         android:layout_alignTop="@id/head2"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/count" />
+        android:layout_above="@+id/count"
+        android:textColor="@color/colorSecondaryText"/>
 
     <Button
         android:text="@string/countY"
@@ -128,7 +135,8 @@
         android:id="@+id/finalData"
         android:layout_below="@+id/count"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="29dp" />
+        android:layout_marginTop="29dp"
+        android:textColor="@color/colorPrimaryText"/>
 
     <EditText
         android:layout_width="@dimen/size2"
@@ -137,7 +145,8 @@
         android:inputType="numberDecimal|numberSigned"
         android:id="@+id/editB"
         android:layout_alignTop="@+id/b"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorSecondaryText"/>
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -145,6 +154,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="29dp"
         android:layout_below="@id/count"
-        android:id="@+id/finalData2"/>
+        android:id="@+id/finalData2"
+        android:textColor="@color/colorPrimaryText"/>
 
 </RelativeLayout>

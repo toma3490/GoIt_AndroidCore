@@ -121,7 +121,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textRes"
         android:textSize="@dimen/textSize"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryText"/>
 
 
 </LinearLayout>

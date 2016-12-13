@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">GoIT_Android</string>
     <string name="text">I love GoIT so much</string>
+    <string name="value">Value</string>
+    <string name="type_your_text_here">Type your text here</string>
+    <string name="_1_3_fibonacci">1.3 Fibonacci</string>
+    <string name="type_number_of_fib_seq">Type number of Fib. seq.</string>
+    <string name="number">Number</string>
 </resources>
